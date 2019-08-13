@@ -1,11 +1,20 @@
-<head>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-</head>
+<!DOCTYPE html>
+<html>
 
-<body>
-<h>Welcome to the User Factory Example!</h>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>User Factor</title>
+    </head>
 
-</body>
+    <body onload="initialize()">
+        <h>Welcome to the User Factory Example!</h>
 
+        <div id="firebaseui-auth-container"></div>
+        <div id="loader">Loading...</div>
 
+        <script src="./config.js"></script>
+        <script src="./login.js"></script>
+    </body>
+
+</html>
