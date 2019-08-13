@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/brrcrites/js-example-factory/issues"
   },
-  "homepage": "https://github.com/brrcrites/js-example-factory#readme"
+  "homepage": "https://github.com/brrcrites/js-example-factory#readme",
+  "dependencies": {
+    "firebaseui": "^4.1.0"
+  }
 }
