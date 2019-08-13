@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/brrcrites/js-example-factory#readme",
   "dependencies": {
+    "firebase": "^6.3.5",
     "firebaseui": "^4.1.0"
   }
 }
