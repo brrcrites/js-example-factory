@@ -4,14 +4,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>User Factory</title>
+        <title>User Factory - Info</title>
     </head>
 
-    <body onload="userFactory.initializeAuth()">
-        <h1>Welcome to the User Factory Example!</h1>
+    <body onload="userFactory.loadUserInfo()">
+        <h1>User Info</h1>
 
-        <div id="firebaseui-auth-container"></div>
-        <div id="loader">Loading...</div>
+        <h3>Below is the info that you have registered with</h3>
+        <ul id='userInfo'></ul>
 
         <script src="./config.js"></script>
         <script src="./main.js"></script>
