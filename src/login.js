@@ -5,7 +5,7 @@ const firebaseStore = require('firebase/firestore');
 
 const firebaseUi = require('firebaseui');
 
-//function initialize() {
+export function initialize() {
 
     firebase.initializeApp(firebaseConfig);
 
@@ -33,5 +33,5 @@ const firebaseUi = require('firebaseui');
 
     ui.start('#firebaseui-auth-container', uiConfig);
 
-//}
+}
 
