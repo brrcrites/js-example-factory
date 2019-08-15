@@ -1,9 +1,7 @@
-
 const firebase = require('firebase/app');
-const firebaseAuth = require('firebase/auth');
-const firebaseStore = require('firebase/firestore');
-
 const firebaseUi = require('firebaseui');
+require('firebase/auth')
+require('firebase/firestore');
 
 firebase.initializeApp(firebaseConfig);
 
@@ -54,9 +52,9 @@ export function initializeAuth() {
 export function mintUser() {
     var userFactory = new Factory();
 
-    var firstName = document.getElementById('firstName').value;
-    var lastName = document.getElementById('lastName').value;
-    var nickName = document.getElementById('nickName').value;
+    var firstName = $('#firstName').val();
+    var lastName = $('#lastName').val();
+    var nickName = $('#nickName').val();
     
     var newUser = userFactory.createUser(firstName, lastName, nickName);
 
@@ -66,28 +64,12 @@ export function mintUser() {
 
 export function loadUserInfo() {
     var user = JSON.parse(localStorage.getItem('user'));
-    console.log(`Email:${user.email},First:${user.firstName},Last:${user.lastName},Nickname:${user.nickName},UID:${user.uid}`);
-
     var userdiv = document.getElementById('userInfo');
 
-    var emailLiElement = document.createElement("LI");
-    var emailTextElement = document.createTextNode(`Email: ${user.email}`);
-    emailLiElement.appendChild(emailTextElement);
-    userdiv.appendChild(emailLiElement);
-
-    var firstLiElement = document.createElement("LI");
-    var firstTextElement = document.createTextNode(`First: ${user.firstName}`);
-    firstLiElement.appendChild(firstTextElement);
-    userdiv.appendChild(firstLiElement);
-
-    var lastLiElement = document.createElement("LI");
-    var lastTextElement = document.createTextNode(`Last: ${user.lastName}`);
-    lastLiElement.appendChild(lastTextElement);
-    userdiv.appendChild(lastLiElement);
-
-    var uidLiElement = document.createElement("LI");
-    var uidTextElement = document.createTextNode(`UID: ${user.uid}`);
-    uidLiElement.appendChild(uidTextElement);
-    userdiv.appendChild(uidLiElement);
+    $('#userInfo').append(`<li>Email: ${user.email}</li>`);
+    $('#userInfo').append(`<li>First: ${user.firstName}</li>`);
+    $('#userInfo').append(`<li>Last: ${user.lastName}</li>`);
+    $('#userInfo').append(`<li>Nickname: ${user.nickName}</li>`);
+    $('#userInfo').append(`<li>UID: ${user.uid}</li>`);
 }
 
