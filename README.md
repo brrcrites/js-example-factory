@@ -1,5 +1,29 @@
-# js-example-factory
+# JavaScript Factory Pattern Example
 
-Make sure to enable "email and password" authentication in your Firebase project before trying to use this setup.
+This shows how you can use the factory pattern to more easily create new users for your site without the developer creating those new users knowinng the inner working of initializing the objects.
 
-[Firebase reference documentation](https://firebase.google.com/docs/auth/web/firebaseui)
+## Setup
+
+* Create a new Firebase Web App and install the `firebase-cli` tools
+* Download your config.js file from your Firebase Web App and add it to the public/ directory
+* Go to the Authentication page for your Web App and enable "email and password" authentication
+* Run `npm install` to download all the dependencies and run `npm start` to run webpack and start the project locally
+
+## References
+
+Here is a (more or less) complete list of all the references that I used for creating this example. I am not a native web developer so they span a number of topics including working with firebase, using webpack to allow the code onto browsers, HTML5 storage, and working with DOM elements. I used a previous project to reference the HTML elements that I needed to build (although there are very few).
+
+* [Easily add sign-on to your Web App with FirebaseUI](https://firebase.google.com/docs/auth/web/firebaseui)
+* [Add Firebase to your JavaScript Project](https://firebase.google.com/docs/web/setup)
+* [Build your First Simple App with Firebase](https://neoteric.eu/blog/building-your-first-simple-app-with-firebase/)
+* [Firebase NPM Entry](https://www.npmjs.com/package/firebase)
+* [Webpack - Getting Started](https://webpack.js.org/guides/getting-started/)
+* [Stack Overflow - Calling webpack code from outside (HTML script tag)](https://stackoverflow.com/questions/34357489/calling-webpacked-code-from-outside-html-script-tag)
+* [Webpack - Expose the Library](https://webpack.js.org/guides/author-libraries/#expose-the-library)
+* [Managing Users in Firebase](https://firebase.google.com/docs/auth/web/manage-users)
+* [Stack Overflow - Persist variables between page loads](https://stackoverflow.com/questions/29986657/persist-variables-between-page-loads/30070207)
+* [W3Schools - HTML5 Web Storage](https://www.w3schools.com/html/html5_webstorage.asp)
+* [Stack Overflow - Storing Objects in HTML5 localStorage](https://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage)
+* [W3Schools - HOW TO - Redirect to Another Webpage](https://www.w3schools.com/howto/howto_js_redirect_webpage.asp)
+* [Stack Overflow - JavaScript - Getting HTML Form Values](https://stackoverflow.com/questions/3547035/javascript-getting-html-form-values)
+* [W3Schools - HTML DOM appendChild() Method](https://www.w3schools.com/jsref/met_node_appendchild.asp)
