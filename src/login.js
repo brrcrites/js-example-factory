@@ -1,7 +1,14 @@
 const firebase = require('firebase/app');
 const firebaseUi = require('firebaseui');
-require('firebase/auth')
+require('firebase/auth');
 require('firebase/firestore');
+
+/*
+import firebase from 'firebase/app';
+import firebaseUi from 'firebaseui';
+import 'firebase/auth';
+import 'firebase/firestore';
+*/
 
 firebase.initializeApp(firebaseConfig);
 
@@ -13,6 +20,18 @@ class User {
         this.nickName = nickName;
         this.uid = uid;
     }
+
+    async save() {
+        console.log('Saving user data with uid', this.uid);
+        var db = firebase.firestore();
+        await db.collection('users').doc(this.uid).set({
+            email: this.email,
+            first: this.firstName,
+            last: this.lastName,
+            nickname: this.nickName
+        });
+        console.log('Done saving user with uid', this.uid);
+    }
 }
 
 class Factory {
@@ -20,7 +39,11 @@ class Factory {
         var user = firebase.auth().currentUser;
         var email = user.email;
         var uid = user.uid;
-        return new User(email, firstName, lastName, nickName, uid);
+        var user = new User(email, firstName, lastName, nickName, uid);
+        console.log('About to save user to firestore');
+        user.save();
+        console.log('Done saving user to firestore');
+        return user;
     }
 }
 

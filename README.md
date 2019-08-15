@@ -7,6 +7,7 @@ This shows how you can use the factory pattern to more easily create new users f
 * Create a new Firebase Web App and install the `firebase-cli` tools
 * Download your config.js file from your Firebase Web App and add it to the public/ directory
 * Go to the Authentication page for your Web App and enable "email and password" authentication
+* Create a Firestore database in test mode
 * Run `npm install` to download all the dependencies and run `npm start` to run webpack and start the project locally
 
 ## References
