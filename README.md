@@ -4,10 +4,13 @@ This shows how you can use the factory pattern to more easily create new users f
 
 ## Setup
 
-* Create a new Firebase Web App and install the `firebase-cli` tools
-* Download your config.js file from your Firebase Web App and add it to the public/ directory
-* Go to the Authentication page for your Web App and enable "email and password" authentication
+* Create a new Firebase project and add a web app to your Firebase project
+* Install the `firebase-cli` tools and use `firebase login` to log into the Google account associated with Firebase
+* Clone this repository and initialize it using `firebase init` and link it to the web app you just created
+* Copy your apps configuration snippet (Settings > Project settings > Your Apps > Firebase SDK Snippet > Config) to a config.js file in the public/ directory
+* Go to the Authentication page for your project and under "Sign-in method" enable the first case under "Email/Password" authentication
 * Run `npm install` to download all the dependencies and run `npm start` to run webpack and start the project locally
+* Optionally run `npm run deploy` to package up the project and deploy it to Firebase
 
 ## References
 

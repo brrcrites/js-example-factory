@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>User Factory - Success</title>
+        <title>User Factory Address Form</title>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
@@ -12,10 +12,12 @@
     <body>
         <h1>Login Successful!</h1>
 
-        <h3>Please tell us this additional information</h3>
-        First Name<input type="text" id="firstName">
-        Last Name<input type="text" id="lastName">
-        Nick Name<input type="text" id="nickName">
+        <h3>Please enter your (fake) address</h3>
+        Address 1<input type="text" id="address1"><br>
+        Address 2<input type="text" id="address2"><br>
+        City<input type="text" id="city"><br>
+        State<input type="text" id="state"><br>
+        Zip<input type="text" id="zip">
         <button type="button" onclick="userFactory.mintUser()">Create Account</button>
 
         <script src="./config.js"></script>
